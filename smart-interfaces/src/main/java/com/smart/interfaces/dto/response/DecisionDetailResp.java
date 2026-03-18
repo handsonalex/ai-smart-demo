@@ -4,6 +4,11 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import java.time.LocalDateTime;
 
+/**
+ * 决策详情响应
+ *
+ * @author Joseph Ho
+ */
 @Data
 @Schema(description = "决策详情响应")
 public class DecisionDetailResp {

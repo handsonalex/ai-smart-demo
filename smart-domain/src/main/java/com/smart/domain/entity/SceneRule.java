@@ -11,6 +11,8 @@ import java.time.LocalDateTime;
 
 /**
  * 场景规则
+ *
+ * @author Joseph Ho
  */
 @Data
 @TableName("t_scene_rule")

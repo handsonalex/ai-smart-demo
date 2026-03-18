@@ -11,6 +11,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * 知识库应用服务
+ *
+ * @author Joseph Ho
+ */
 @Slf4j
 @Service
 @RequiredArgsConstructor

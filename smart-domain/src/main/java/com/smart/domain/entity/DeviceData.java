@@ -12,6 +12,8 @@ import java.time.LocalDateTime;
 
 /**
  * 设备数据
+ *
+ * @author Joseph Ho
  */
 @Data
 @TableName("t_device_data")

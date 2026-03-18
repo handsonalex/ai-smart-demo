@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 /**
  * MySQL 数据源配置
  *
- * @author smart
+ * @author Joseph Ho
  */
 @Configuration
 @MapperScan(

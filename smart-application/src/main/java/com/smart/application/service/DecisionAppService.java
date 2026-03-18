@@ -28,6 +28,8 @@ import java.util.List;
  * 3. RAG 检索相关知识
  * 4. 调用 AI 大模型推理
  * 5. 生成决策结果并下发
+ *
+ * @author Joseph Ho
  */
 @Slf4j
 @Service
@@ -82,9 +84,7 @@ public class DecisionAppService {
 
             // 第三阶段：AI 推理
             record.setStage(DecisionStage.AI_INFERENCE.getCode());
-            // TODO: 调用 Spring AI ChatClient 进行推理
-            // String prompt = buildPrompt(matchedScene, data, knowledgeChunks);
-            // String aiResponse = chatClient.call(prompt);
+            // TODO: 构建 Prompt 并调用 Spring AI ChatClient 进行推理
             String aiResponse = "TODO: AI 推理结果";
             record.setAiResponse(aiResponse);
 

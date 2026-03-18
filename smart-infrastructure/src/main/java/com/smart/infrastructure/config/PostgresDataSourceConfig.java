@@ -14,6 +14,11 @@ import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
 
+/**
+ * PostgreSQL 数据源配置
+ *
+ * @author Joseph Ho
+ */
 @Configuration
 @MapperScan(
         basePackages = "com.smart.domain.mapper.chunk",

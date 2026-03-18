@@ -4,6 +4,11 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * 场景缓存 DTO
+ *
+ * @author Joseph Ho
+ */
 @Data
 public class SmartSceneDTO implements Serializable {
     private Long id;

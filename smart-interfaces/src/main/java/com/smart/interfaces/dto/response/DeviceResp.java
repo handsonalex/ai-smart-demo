@@ -5,6 +5,11 @@ import lombok.Data;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+/**
+ * 设备响应
+ *
+ * @author Joseph Ho
+ */
 @Data
 @Schema(description = "设备响应")
 public class DeviceResp {

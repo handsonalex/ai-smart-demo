@@ -5,6 +5,11 @@ import lombok.Data;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * 场景详情响应
+ *
+ * @author Joseph Ho
+ */
 @Data
 @Schema(description = "场景详情响应")
 public class SceneDetailResp {

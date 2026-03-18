@@ -11,6 +11,8 @@ import java.time.LocalDateTime;
 
 /**
  * 决策记录
+ *
+ * @author Joseph Ho
  */
 @Data
 @TableName("t_decision_record")

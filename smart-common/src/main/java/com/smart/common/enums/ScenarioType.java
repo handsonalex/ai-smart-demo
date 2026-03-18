@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * 场景类型枚举
  *
- * @author smart
+ * @author Joseph Ho
  */
 @Getter
 @AllArgsConstructor

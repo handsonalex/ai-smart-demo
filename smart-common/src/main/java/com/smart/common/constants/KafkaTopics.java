@@ -3,7 +3,7 @@ package com.smart.common.constants;
 /**
  * Kafka 主题常量
  *
- * @author smart
+ * @author Joseph Ho
  */
 public final class KafkaTopics {
 

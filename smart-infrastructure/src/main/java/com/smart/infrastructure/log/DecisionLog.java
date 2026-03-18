@@ -5,6 +5,8 @@ import java.time.LocalDateTime;
 
 /**
  * 决策日志（存储到 Elasticsearch）
+ *
+ * @author Joseph Ho
  */
 @Data
 public class DecisionLog {

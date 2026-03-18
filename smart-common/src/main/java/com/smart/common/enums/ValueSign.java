@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * 值比较符号枚举
  *
- * @author smart
+ * @author Joseph Ho
  */
 @Getter
 @AllArgsConstructor

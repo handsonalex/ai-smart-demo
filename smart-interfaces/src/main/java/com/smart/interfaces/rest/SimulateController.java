@@ -12,6 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 模拟测试控制器（仅 dev 环境）
+ *
+ * @author Joseph Ho
+ */
 @Tag(name = "模拟测试（仅 dev 环境）")
 @Profile("dev")
 @RestController

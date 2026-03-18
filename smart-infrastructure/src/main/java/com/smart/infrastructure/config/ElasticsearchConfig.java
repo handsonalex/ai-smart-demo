@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Configuration;
  * ES connection and client settings are loaded from application.yml
  * via Spring Boot auto-configuration.
  * </p>
+ *
+ * @author Joseph Ho
  */
 @Configuration
 public class ElasticsearchConfig {

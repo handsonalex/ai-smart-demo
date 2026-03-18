@@ -3,7 +3,7 @@ package com.smart.common.constants;
 /**
  * 缓存过期时间常量（单位：秒）
  *
- * @author smart
+ * @author Joseph Ho
  */
 public final class CacheExpire {
 

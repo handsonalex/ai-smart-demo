@@ -11,6 +11,8 @@ import java.time.LocalDateTime;
 
 /**
  * 智能场景
+ *
+ * @author Joseph Ho
  */
 @Data
 @TableName("t_smart_scene")

@@ -6,6 +6,11 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import java.math.BigDecimal;
 
+/**
+ * 创建电站请求
+ *
+ * @author Joseph Ho
+ */
 @Data
 @Schema(description = "创建电站请求")
 public class StationCreateReq {

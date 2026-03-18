@@ -12,6 +12,8 @@ import java.time.LocalDateTime;
 
 /**
  * 电站
+ *
+ * @author Joseph Ho
  */
 @Data
 @TableName("t_station")

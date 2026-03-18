@@ -11,6 +11,8 @@ import java.time.LocalDateTime;
 
 /**
  * 操作日志
+ *
+ * @author Joseph Ho
  */
 @Data
 @TableName("t_operation_log")

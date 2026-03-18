@@ -3,7 +3,7 @@ package com.smart.common.constants;
 /**
  * Redis Key 常量
  *
- * @author smart
+ * @author Joseph Ho
  */
 public final class RedisKeys {
 

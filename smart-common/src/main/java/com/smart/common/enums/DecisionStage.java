@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * 决策阶段枚举
  *
- * @author smart
+ * @author Joseph Ho
  */
 @Getter
 @AllArgsConstructor

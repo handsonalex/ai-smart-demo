@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * 错误码枚举
  *
- * @author smart
+ * @author Joseph Ho
  */
 @Getter
 @AllArgsConstructor

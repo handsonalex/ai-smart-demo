@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * 决策结果生产者
+ *
+ * @author Joseph Ho
  */
 @Slf4j
 @Component

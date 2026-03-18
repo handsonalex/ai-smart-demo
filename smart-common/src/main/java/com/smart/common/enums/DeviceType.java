@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * 设备类型枚举
  *
- * @author smart
+ * @author Joseph Ho
  */
 @Getter
 @AllArgsConstructor

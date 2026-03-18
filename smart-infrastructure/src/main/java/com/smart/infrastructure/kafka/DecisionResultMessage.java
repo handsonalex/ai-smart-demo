@@ -5,6 +5,8 @@ import java.io.Serializable;
 
 /**
  * 决策结果消息体
+ *
+ * @author Joseph Ho
  */
 @Data
 public class DecisionResultMessage implements Serializable {

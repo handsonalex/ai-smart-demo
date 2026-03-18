@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 /**
  * 全局异常处理器
  *
- * @author smart
+ * @author Joseph Ho
  */
 @Slf4j
 @RestControllerAdvice

@@ -9,6 +9,8 @@ import java.util.List;
 
 /**
  * 向量存储服务
+ *
+ * @author Joseph Ho
  */
 @Slf4j
 @Service

@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * JSON 工具类
  *
- * @author smart
+ * @author Joseph Ho
  */
 @Slf4j
 public final class JsonUtil {

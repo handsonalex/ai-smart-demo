@@ -7,6 +7,8 @@ import java.util.List;
 
 /**
  * 决策日志服务（Elasticsearch）
+ *
+ * @author Joseph Ho
  */
 @Slf4j
 @Service

@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 分页返回结果
  *
- * @author smart
+ * @author Joseph Ho
  */
 @Data
 public class PageResult<T> implements Serializable {

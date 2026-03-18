@@ -6,6 +6,11 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import java.util.List;
 
+/**
+ * 创建场景请求
+ *
+ * @author Joseph Ho
+ */
 @Data
 @Schema(description = "创建场景请求")
 public class SceneCreateReq {

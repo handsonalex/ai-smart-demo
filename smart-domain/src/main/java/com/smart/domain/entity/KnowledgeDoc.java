@@ -11,6 +11,8 @@ import java.time.LocalDateTime;
 
 /**
  * 知识文档
+ *
+ * @author Joseph Ho
  */
 @Data
 @TableName("t_knowledge_doc")

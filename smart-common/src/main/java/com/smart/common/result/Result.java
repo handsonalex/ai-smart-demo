@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * 统一返回结果
  *
- * @author smart
+ * @author Joseph Ho
  */
 @Data
 public class Result<T> implements Serializable {

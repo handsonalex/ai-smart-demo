@@ -7,6 +7,8 @@ import java.lang.annotation.Target;
 
 /**
  * 决策日志注解
+ *
+ * @author Joseph Ho
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

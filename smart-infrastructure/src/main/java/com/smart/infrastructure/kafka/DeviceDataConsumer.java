@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * 设备数据消费者
+ *
+ * @author Joseph Ho
  */
 @Slf4j
 @Component

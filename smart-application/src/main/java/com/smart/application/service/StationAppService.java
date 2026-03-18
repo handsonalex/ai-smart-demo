@@ -10,6 +10,11 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+/**
+ * 电站应用服务
+ *
+ * @author Joseph Ho
+ */
 @Slf4j
 @Service
 @RequiredArgsConstructor

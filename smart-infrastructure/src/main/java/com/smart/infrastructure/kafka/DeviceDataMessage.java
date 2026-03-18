@@ -7,6 +7,8 @@ import java.time.LocalDateTime;
 
 /**
  * 设备数据消息体
+ *
+ * @author Joseph Ho
  */
 @Data
 public class DeviceDataMessage implements Serializable {

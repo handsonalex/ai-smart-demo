@@ -5,6 +5,11 @@ import lombok.Data;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+/**
+ * 电站响应
+ *
+ * @author Joseph Ho
+ */
 @Data
 @Schema(description = "电站响应")
 public class StationResp {

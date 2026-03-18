@@ -4,6 +4,11 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
+/**
+ * 上传知识文档请求
+ *
+ * @author Joseph Ho
+ */
 @Data
 @Schema(description = "上传知识文档请求")
 public class KnowledgeUploadReq {

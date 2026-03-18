@@ -6,6 +6,8 @@ import java.util.List;
 
 /**
  * Embedding 向量化服务
+ *
+ * @author Joseph Ho
  */
 @Slf4j
 @Service

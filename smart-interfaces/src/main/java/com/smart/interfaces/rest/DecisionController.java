@@ -15,6 +15,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * 决策管理控制器
+ *
+ * @author Joseph Ho
+ */
 @Tag(name = "决策管理")
 @RestController
 @RequestMapping("/api/v1/decisions")

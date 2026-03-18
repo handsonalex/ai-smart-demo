@@ -12,6 +12,8 @@ import java.time.LocalDateTime;
 
 /**
  * 知识分片 (PostgreSQL pgvector)
+ *
+ * @author Joseph Ho
  */
 @Data
 @TableName(value = "t_knowledge_chunk", autoResultMap = true)

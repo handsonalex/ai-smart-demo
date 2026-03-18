@@ -15,6 +15,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * 场景应用服务
+ *
+ * @author Joseph Ho
+ */
 @Slf4j
 @Service
 @RequiredArgsConstructor

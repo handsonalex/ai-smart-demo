@@ -6,6 +6,8 @@ import java.util.List;
 
 /**
  * 文本分片器
+ *
+ * @author Joseph Ho
  */
 @Component
 public class TextSplitter {

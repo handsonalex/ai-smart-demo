@@ -10,21 +10,29 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * PgVector类型处理器
+ *
+ * @author Joseph Ho
+ */
 @MappedTypes(float[].class)
 @MappedJdbcTypes(JdbcType.OTHER)
 public class PgVectorTypeHandler extends BaseTypeHandler<float[]> {
 
+    private static final String BRACKET_LEFT = "[";
+    private static final String BRACKET_RIGHT = "]";
+
     @Override
     public void setNonNullParameter(PreparedStatement ps, int i, float[] parameter, JdbcType jdbcType)
             throws SQLException {
-        StringBuilder sb = new StringBuilder("[");
+        StringBuilder sb = new StringBuilder(BRACKET_LEFT);
         for (int j = 0; j < parameter.length; j++) {
             if (j > 0) {
                 sb.append(",");
             }
             sb.append(parameter[j]);
         }
-        sb.append("]");
+        sb.append(BRACKET_RIGHT);
         ps.setString(i, sb.toString());
     }
 
@@ -52,10 +60,10 @@ public class PgVectorTypeHandler extends BaseTypeHandler<float[]> {
         }
         // Remove surrounding brackets [ ]
         String trimmed = value.trim();
-        if (trimmed.startsWith("[")) {
+        if (trimmed.startsWith(BRACKET_LEFT)) {
             trimmed = trimmed.substring(1);
         }
-        if (trimmed.endsWith("]")) {
+        if (trimmed.endsWith(BRACKET_RIGHT)) {
             trimmed = trimmed.substring(0, trimmed.length() - 1);
         }
         String[] parts = trimmed.split(",");

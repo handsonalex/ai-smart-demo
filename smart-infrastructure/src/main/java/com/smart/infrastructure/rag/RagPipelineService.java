@@ -7,6 +7,8 @@ import java.util.List;
 
 /**
  * RAG 管道服务：文档加载 -> 分片 -> 向量化 -> 存储
+ *
+ * @author Joseph Ho
  */
 @Slf4j
 @Service

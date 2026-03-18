@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * AI 智能决策系统启动类
  *
- * @author smart
+ * @author Joseph Ho
  */
 @SpringBootApplication
 public class AiSmartDemoApplication {

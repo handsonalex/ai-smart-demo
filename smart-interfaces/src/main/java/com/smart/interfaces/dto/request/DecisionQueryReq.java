@@ -3,6 +3,11 @@ package com.smart.interfaces.dto.request;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
+/**
+ * 决策查询请求
+ *
+ * @author Joseph Ho
+ */
 @Data
 @Schema(description = "决策查询请求")
 public class DecisionQueryReq {
