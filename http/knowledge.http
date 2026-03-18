@@ -1,0 +1,21 @@
+### 上传知识文档
+POST http://localhost:8080/api/v1/knowledge/upload
+Content-Type: application/json
+
+{
+  "docName": "光伏储能最佳实践指南",
+  "docType": "PDF",
+  "filePath": "/data/docs/pv-best-practice.pdf"
+}
+
+### 查询知识文档详情
+GET http://localhost:8080/api/v1/knowledge/1
+
+### 查询所有知识文档
+GET http://localhost:8080/api/v1/knowledge
+
+### RAG 检索
+GET http://localhost:8080/api/v1/knowledge/retrieve?query=光伏板功率异常如何处理&topK=5
+
+### 删除知识文档
+DELETE http://localhost:8080/api/v1/knowledge/1

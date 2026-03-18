@@ -1,0 +1,35 @@
+### 创建场景 - 削峰填谷
+POST http://localhost:8080/api/v1/scenes
+Content-Type: application/json
+
+{
+  "sceneName": "削峰填谷-白天充电晚间放电",
+  "scenarioType": 1,
+  "stationId": 1,
+  "enabled": true,
+  "priority": 1,
+  "description": "在电价低谷期充电，高峰期放电",
+  "rules": [
+    {
+      "conditionType": 1,
+      "conditionSign": 2,
+      "thresholdValue": "80",
+      "action": "开始放电"
+    },
+    {
+      "conditionType": 2,
+      "conditionSign": 1,
+      "thresholdValue": "50",
+      "action": "限制功率"
+    }
+  ]
+}
+
+### 查询场景详情
+GET http://localhost:8080/api/v1/scenes/1
+
+### 查询电站下场景列表
+GET http://localhost:8080/api/v1/scenes/station/1
+
+### 删除场景
+DELETE http://localhost:8080/api/v1/scenes/1

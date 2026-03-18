@@ -1,0 +1,29 @@
+### 模拟设备上报数据（仅 dev 环境）
+POST http://localhost:8080/api/v1/simulate/device-data
+Content-Type: application/json
+
+{
+  "deviceId": 1,
+  "stationId": 1,
+  "power": 85.50,
+  "voltage": 380.00,
+  "current": 12.50,
+  "temperature": 35.00,
+  "soc": 82.00,
+  "collectTime": "2024-01-15T10:30:00"
+}
+
+### 模拟低 SOC 数据
+POST http://localhost:8080/api/v1/simulate/device-data
+Content-Type: application/json
+
+{
+  "deviceId": 1,
+  "stationId": 1,
+  "power": 20.00,
+  "voltage": 370.00,
+  "current": 5.00,
+  "temperature": 28.00,
+  "soc": 15.00,
+  "collectTime": "2024-01-15T14:30:00"
+}
