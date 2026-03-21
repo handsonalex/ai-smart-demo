@@ -1,60 +1,123 @@
+# ============================
+# 开发环境配置文件（application-dev.yml）
+# 当 spring.profiles.active=dev 时生效
+# ============================
+
 spring:
-  # MySQL 数据源
+  # ============================
+  # MySQL 数据源配置
+  # ============================
   datasource:
     mysql:
+      # MySQL JDBC 驱动类（MySQL 8.x 使用 com.mysql.cj.jdbc.Driver）
       driver-class-name: com.mysql.cj.jdbc.Driver
+      # MySQL 连接 URL，各参数说明：
+      #   useUnicode=true             — 启用 Unicode 编码，支持中文等多字节字符
+      #   characterEncoding=utf-8     — 字符集设为 UTF-8
+      #   useSSL=false                — 开发环境关闭 SSL 加密连接
+      #   serverTimezone=Asia/Shanghai — 指定服务器时区为东八区，避免时间偏移问题
+      #   allowPublicKeyRetrieval=true — 允许从服务器获取公钥（MySQL 8.x 认证需要）
       jdbc-url: jdbc:mysql://localhost:3306/appdb?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+      # 数据库用户名
       username: appuser
+      # 数据库密码
       password: apppass
+      # 连接池类型：HikariCP（Spring Boot 默认推荐的高性能连接池）
       type: com.zaxxer.hikari.HikariDataSource
+      # HikariCP 连接池参数
       hikari:
+        # 最小空闲连接数，连接池始终保持至少 5 个空闲连接
         minimum-idle: 5
+        # 最大连接数，连接池中最多同时存在 20 个连接（含空闲和活跃）
         maximum-pool-size: 20
+        # 空闲连接超时时间（毫秒），空闲超过 30 秒的连接将被回收（直到 minimum-idle 为止）
         idle-timeout: 30000
+        # 获取连接超时时间（毫秒），等待超过 30 秒仍无可用连接则抛出异常
         connection-timeout: 30000
 
-    # PostgreSQL 数据源
+    # ============================
+    # PostgreSQL 数据源配置
+    # ============================
     postgres:
+      # PostgreSQL JDBC 驱动类
       driver-class-name: org.postgresql.Driver
+      # PostgreSQL 连接 URL，连接本地 5432 端口的 appdb 数据库
       jdbc-url: jdbc:postgresql://localhost:5432/appdb
+      # 数据库用户名
       username: appuser
+      # 数据库密码
       password: apppass
+      # 连接池类型：HikariCP
       type: com.zaxxer.hikari.HikariDataSource
+      # HikariCP 连接池参数
       hikari:
+        # 最小空闲连接数
         minimum-idle: 3
+        # 最大连接数
         maximum-pool-size: 10
 
-  # Redis
+  # ============================
+  # Redis 缓存配置
+  # ============================
   data:
     redis:
+      # Redis 服务器地址
       host: localhost
+      # Redis 端口（注意：此处使用非默认端口 16379，默认端口为 6379）
       port: 16379
+      # Redis 访问密码
       password: redis123
+      # 使用的数据库索引（0-15），默认使用 0 号数据库
       database: 0
+      # 连接超时时间，超过 5 秒未连接成功则超时
       timeout: 5000ms
 
-  # Kafka
+  # ============================
+  # Kafka 消息队列配置
+  # ============================
   kafka:
+    # Kafka Broker 地址（注意：此处使用非默认端口 19092，默认端口为 9092）
     bootstrap-servers: localhost:19092
+    # 消费者配置
     consumer:
+      # 消费者组 ID，同一组内的消费者共同消费 Topic 中的消息（负载均衡）
       group-id: smart-group
+      # 消费偏移量重置策略：earliest 表示从最早的消息开始消费（首次加入或偏移量失效时）
       auto-offset-reset: earliest
+      # 消息 Key 的反序列化器，使用字符串反序列化
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      # 消息 Value 的反序列化器，使用字符串反序列化
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    # 生产者配置
     producer:
+      # 消息 Key 的序列化器，使用字符串序列化
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # 消息 Value 的序列化器，使用字符串序列化
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
 
-  # Elasticsearch
+  # ============================
+  # Elasticsearch 搜索引擎配置
+  # ============================
   elasticsearch:
+    # ES 服务地址，默认端口 9200（HTTP REST 接口）
     uris: http://localhost:9200
 
-  # Spring AI - OpenAI 兼容配置
+  # ============================
+  # Spring AI — OpenAI 兼容接口配置
+  # ============================
+  # Spring AI 通过 OpenAI 兼容协议对接大语言模型（LLM）
+  # 支持 OpenAI 原生接口，也兼容其他实现了 OpenAI API 协议的服务（如本地模型代理）
   ai:
     openai:
+      # API 密钥，优先读取环境变量 OPENAI_API_KEY，未设置时使用占位符
       api-key: ${OPENAI_API_KEY:sk-placeholder}
+      # API 基础地址，优先读取环境变量 OPENAI_BASE_URL，未设置时使用 OpenAI 官方地址
+      # 如需对接第三方兼容接口（如 LocalAI、OneAPI 等），修改此地址即可
       base-url: ${OPENAI_BASE_URL:https://api.openai.com}
       chat:
         options:
+          # 使用的模型名称，此处为 GPT-4
           model: gpt-4
+          # 温度参数（0.0 ~ 2.0），控制生成文本的随机性
+          # 值越低输出越确定/保守，值越高输出越多样/创造性；0.7 为较均衡的设置
           temperature: 0.7
